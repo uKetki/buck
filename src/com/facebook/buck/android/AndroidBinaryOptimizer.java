@@ -117,7 +117,7 @@ public abstract class AndroidBinaryOptimizer implements AddsToRuleKey {
     Path v2SignedApkPath =
         AndroidBinaryPathUtility.getFinalApkPath(filesystem, buildTarget, binaryType);
 
-    Path pathToKeystore = resolver.getAbsolutePath(keystorePath).iterator().next();
+    Path pathToKeystore = resolver.getAbsolutePath(keystorePath);
     Supplier<KeystoreProperties> keystoreProperties =
         getKeystorePropertiesSupplier(resolver, pathToKeystore);
 
